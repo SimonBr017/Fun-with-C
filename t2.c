@@ -1,22 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h> /* pour rand */
-#include <ctype.h> /* pour isdigit */
 
 int main(void)
 {
 	int x = 0;
 	int nb_user = 0;
-	int chiffre_aleatoir;
+        int chiffre_aleatoir;
 
 	while (x == 0)
 	{
 		srand(time(NULL));
-		chiffre_aleatoir = rand() % 9 + 1;
+		chiffre_aleatoir = rand() % 99 + 1;
 		do
 		{
 			putchar('\n');		
-			printf("Pick a number between 1 and 9 >> ");
+			printf("Pick a number between 1 and 99 >> ");
 			scanf("%d", &nb_user);
 				
 			if (nb_user > chiffre_aleatoir)
